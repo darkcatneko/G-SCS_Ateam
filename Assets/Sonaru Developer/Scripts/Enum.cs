@@ -2,6 +2,7 @@
 
 public enum StateEnum
 {
+    NOTHING,
     PlayerCommand,
     CharacterMove,
     GameOver,
