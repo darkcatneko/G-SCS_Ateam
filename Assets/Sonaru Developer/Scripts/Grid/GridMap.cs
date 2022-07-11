@@ -6,7 +6,7 @@ using UnityEngine;
 public class GridMap
 {
     public Vector3 originPosition = Vector3.zero;
-    public bool OpenDebugMode = true;
+    public bool OpenDebugMode;
     
     private int columnNum;
     private int rowNum;
@@ -14,11 +14,12 @@ public class GridMap
     private GridBlock[,] allGridBlocks;
     private TextMesh[,] debugTexts;
     
-    public GridMap(int row, int col, float size)
+    public GridMap(int row, int col, float size, bool gridDebug)
     {
         rowNum = row;
         columnNum = col;
         cellSize = size;
+        OpenDebugMode = gridDebug;
 
         allGridBlocks = new GridBlock[rowNum, columnNum];
         for(var i = 0; i < rowNum; i++)
@@ -40,7 +41,7 @@ public class GridMap
         {
             for(int y = 0; y < debugTexts.GetLength(1); y++)
             {
-                debugTexts[x, y] = DebugTextMesh.CreatWorldText(allGridBlocks[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(cellSize, cellSize) * .5f, (int)(0.125f * cellSize * cellSize + 7.5f), Color.blue, TextAnchor.MiddleCenter);
+                debugTexts[x, y] = DebugTextMesh.CreatWorldText(allGridBlocks[x, y]?.ToString(), null, GetWorldPosition(x, y) + new Vector3(cellSize, 0, cellSize) * .5f, (int)(0.125f * cellSize * cellSize + 7.5f), Color.blue, TextAnchor.MiddleCenter);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.red, 100f);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.red, 100f);
             }
@@ -52,7 +53,6 @@ public class GridMap
 
     public Vector3 GetWorldPosition(int x, int y)
     {
-        Debug.Log(x+" " + y );
         return new Vector3(x, 0, y) * cellSize + originPosition;
     }
 }
