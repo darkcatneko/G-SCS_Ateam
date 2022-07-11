@@ -26,7 +26,8 @@ public class GamePadRegistry : MonoBehaviour
     public DpadControl LeftDpad;
     void Start()
     {
-        
+        PlayerManager.playerList.Clear();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame

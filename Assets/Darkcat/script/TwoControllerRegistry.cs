@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.SceneManagement;
 
 public class TwoControllerRegistry : MonoBehaviour
 {
@@ -35,7 +36,8 @@ public class TwoControllerRegistry : MonoBehaviour
                 if (g.rightTrigger.isPressed || g.leftTrigger.isPressed)
                 {
                     Debug.Log("next scene");
-                    
+                    //SceneManager.LoadScene("MainGameScene");
+                    SceneManager.LoadScene("Grid");
                 }
             }
         }
