@@ -189,7 +189,7 @@ MonoBehaviour:
   player: 1
   My_Command: 0
   Sure: 0
-  CanInput: 0
+  CanInput: 1
 --- !u!1 &701067178
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   player: 0
   My_Command: 0
   Sure: 0
-  CanInput: 0
+  CanInput: 1
 --- !u!1 &842693763
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +308,7 @@ MonoBehaviour:
   - {fileID: 1040109714}
   - {fileID: 1465506666}
   CanInput: 0
+  currentState: 0
 --- !u!1 &904875208
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +490,7 @@ MonoBehaviour:
   player: 2
   My_Command: 0
   Sure: 0
-  CanInput: 0
+  CanInput: 1
 --- !u!1 &1276782870
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,7 +605,7 @@ MonoBehaviour:
   player: 3
   My_Command: 0
   Sure: 0
-  CanInput: 0
+  CanInput: 1
 --- !u!1 &1519201700
 GameObject:
   m_ObjectHideFlags: 0

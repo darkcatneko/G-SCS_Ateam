@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class PlayerController : MonoBehaviour
 {
@@ -35,10 +37,18 @@ public class PlayerController : MonoBehaviour
    
     void Update()
     {
-        if (CanInput == true)
+        if (CanInput)
         {
-            
-        }
+            if (player == Player.Player1 || player == Player.Player3)
+            {
+                if (My_GamePad._gamepad.buttonEast.isPressed)
+                {
+                    My_Command = CommandType.Right;
+                    Debug.Log((int)this.player);
+                }
+            }
+
+        }       
     }
 
     
