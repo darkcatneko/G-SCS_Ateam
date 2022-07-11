@@ -19,10 +19,6 @@ public class GamePadRegistry : MonoBehaviour
     }
     public Check check;
     public bool isChecked = false;
-    public ButtonControl RightEastButton;
-    public ButtonControl RightNorthButton;
-    public ButtonControl RightSouthButton;
-    public ButtonControl RightWestButton;
     public DpadControl LeftDpad;
     void Start()
     {
@@ -45,10 +41,6 @@ public class GamePadRegistry : MonoBehaviour
                         _gamepad = g;
                         isChecked = true;                      
                         PlayerManager.playerList.Add(g, this);
-                        RightEastButton = _gamepad.buttonEast;
-                        RightNorthButton= _gamepad.buttonNorth;
-                        RightSouthButton = _gamepad.buttonSouth;
-                        RightWestButton = _gamepad.buttonWest;
                         LeftDpad = _gamepad.dpad;
                         Debug.Log(check.ToString());
                         return;
@@ -61,10 +53,6 @@ public class GamePadRegistry : MonoBehaviour
                         _gamepad = g;
                         isChecked = true;
                         PlayerManager.playerList.Add(g, this);
-                        RightEastButton = _gamepad.buttonEast;
-                        RightNorthButton = _gamepad.buttonNorth;
-                        RightSouthButton = _gamepad.buttonSouth;
-                        RightWestButton = _gamepad.buttonWest;
                         LeftDpad = _gamepad.dpad;
                         Debug.Log(check.ToString());
                         return;
