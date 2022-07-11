@@ -3,9 +3,11 @@
 public enum StateEnum
 {
     NOTHING,
+    StartGame,
     PlayerCommand,
     CharacterMove,
     GameOver,
+    SpecialEvent,
 }
 
 public enum CommandType

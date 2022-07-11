@@ -17,7 +17,7 @@ public class CharacterMoveState : IState
     {
         // Start move character
         
-        // Check current round : if round == totalRound -> go to game over state
+        // Check if all player not left any move point -> go to game over state
         
         // Check if any player get enough points -> go to game over state
         
@@ -28,6 +28,5 @@ public class CharacterMoveState : IState
     public void OnStateExit()
     {
         Controller.CurrentRound++;
-        Debug.Log("CharacterMove End");
     }
 }

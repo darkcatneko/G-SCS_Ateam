@@ -32,7 +32,7 @@ public class PlayerCommandState : IState
 
     public void OnStateExit()
     {
-        Debug.Log("PlayerCommand End");
+        
     }
     
     

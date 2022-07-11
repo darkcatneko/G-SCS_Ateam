@@ -7,12 +7,13 @@ public class GameController : MonoBehaviour
 {
     public int TotalRound;
     public List<FakePlayer> players;
-    public int CurrentRound { get; set; }
+    public int CurrentRound;
     public bool CanInput = false;
-    [SerializeField] private StateEnum currentState; 
+    //public bool IsLastRound => CurrentRound >= TotalRound;
     
-    //private IState currentState;
+    [SerializeField] private StateEnum currentState;
     private Dictionary<StateEnum, IState> allStateDict;
+    
 
     private void Awake()
     {
@@ -21,8 +22,11 @@ public class GameController : MonoBehaviour
         allStateDict = new Dictionary<StateEnum, IState>
         {
             {StateEnum.NOTHING, null},
+            {StateEnum.StartGame, new StartGameState()},
             {StateEnum.PlayerCommand, new PlayerCommandState()},
-            {StateEnum.CharacterMove, new CharacterMoveState()}
+            {StateEnum.CharacterMove, new CharacterMoveState()},
+            {StateEnum.GameOver, new GameOverState()},
+            {StateEnum.SpecialEvent, new SpecialEventState()}
         };
 
         ChangeState(StateEnum.PlayerCommand);
@@ -54,4 +58,6 @@ public class GameController : MonoBehaviour
 
         return true;
     }
+    
+    
 }
