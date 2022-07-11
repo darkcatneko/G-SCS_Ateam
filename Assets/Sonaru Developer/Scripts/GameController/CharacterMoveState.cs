@@ -17,6 +17,12 @@ public class CharacterMoveState : IState
     {
         // Start move character
         
+        // Check current round : if round == totalRound -> go to game over state
+        
+        // Check if any player get enough points -> go to game over state
+        
+        // else: round + 1 -> go to player command state
+        
     }
 
     public void OnStateExit()

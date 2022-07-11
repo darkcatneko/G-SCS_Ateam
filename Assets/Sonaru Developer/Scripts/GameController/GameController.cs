@@ -9,7 +9,9 @@ public class GameController : MonoBehaviour
     public List<FakePlayer> players;
     public int CurrentRound { get; set; }
     public bool CanInput = false;
-    private IState currentState;
+    [SerializeField] private StateEnum currentState; 
+    
+    //private IState currentState;
     private Dictionary<StateEnum, IState> allStateDict;
 
     private void Awake()
@@ -18,6 +20,7 @@ public class GameController : MonoBehaviour
 
         allStateDict = new Dictionary<StateEnum, IState>
         {
+            {StateEnum.NOTHING, null},
             {StateEnum.PlayerCommand, new PlayerCommandState()},
             {StateEnum.CharacterMove, new CharacterMoveState()}
         };
@@ -27,18 +30,18 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        currentState?.OnStateStay();
+        allStateDict[currentState]?.OnStateStay();
     }
 
 
     public void ChangeState(StateEnum newState)
     {
-        currentState?.OnStateExit();
+        allStateDict[currentState]?.OnStateExit();
         
         if(allStateDict[newState] == null ) return;
         
-        currentState = allStateDict[newState];
-        currentState.OnStateEnter(this);
+        currentState = newState;
+        allStateDict[currentState].OnStateEnter(this);
     }
 
 
