@@ -8,7 +8,7 @@ public class GameController : MonoBehaviour
     public int TotalRound;
     public List<FakePlayer> players;
     public int CurrentRound { get; set; }
-
+    public bool CanInput = false;
     private IState currentState;
     private Dictionary<StateEnum, IState> allStateDict;
 
@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
 
         allStateDict = new Dictionary<StateEnum, IState>
         {
-            {StateEnum.PlayerCommand, new PlayerCommandState()}, 
+            {StateEnum.PlayerCommand, new PlayerCommandState()},
             {StateEnum.CharacterMove, new CharacterMoveState()}
         };
 
