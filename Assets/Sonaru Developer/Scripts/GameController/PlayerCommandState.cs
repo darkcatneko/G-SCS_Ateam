@@ -13,7 +13,7 @@ public class PlayerCommandState : IState
     {
         Debug.Log("PlayerCommand Start");
         Controller = controller;
-        
+        controller.StartTimer();
         //Reset countdown timer 
         
         // change player command order
@@ -23,7 +23,15 @@ public class PlayerCommandState : IState
     public void OnStateStay()
     {
         // wait player command until time finished
-
+        if (Controller.StartCountDown)
+        {
+            Controller.RoundLastTime -= Time.deltaTime;
+            if (Controller.RoundLastTime<=0)
+            {
+                Controller.StartCountDown = false;
+                Debug.Log("小王八蛋給我按喔");
+            }
+        }        
         if (Controller.AllChecked())
         {
             Controller.ChangeState(StateEnum.CharacterMove);

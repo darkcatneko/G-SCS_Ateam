@@ -10,7 +10,8 @@ public class GameController : MonoBehaviour
     public int CurrentRound;
     public bool CanInput = false;
     //public bool IsLastRound => CurrentRound >= TotalRound;
-    
+    public float RoundLastTime = 5;
+    public bool StartCountDown = false;
     [SerializeField] private StateEnum currentState;
     private Dictionary<StateEnum, IState> allStateDict;
     
@@ -58,6 +59,10 @@ public class GameController : MonoBehaviour
 
         return true;
     }
-    
-    
+
+    public void StartTimer()
+    {
+        RoundLastTime = 5;
+        StartCountDown = true;
+    }
 }
