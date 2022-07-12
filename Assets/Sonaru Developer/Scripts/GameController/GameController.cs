@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
             {StateEnum.SpecialEvent, new SpecialEventState()}
         };
 
-        ChangeState(StateEnum.PlayerCommand);
+        ChangeState(StateEnum.StartGame);
     }
 
     private void Update()

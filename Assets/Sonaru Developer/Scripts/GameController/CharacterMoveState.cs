@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CharacterMoveState : IState
 {
+    
     public GameController Controller { get; set; }
     public void OnStateEnter(GameController controller)
     {
