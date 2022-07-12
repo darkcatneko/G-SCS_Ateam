@@ -40,7 +40,8 @@ public class PlayerCommandState : IState
 
     public void OnStateExit()
     {
-        
+        // Get all commands
+        Controller.CollectInput();
     }
     
     

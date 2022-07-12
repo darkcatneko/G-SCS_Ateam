@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public int TotalRound;
+    public MainCharacter Character;                     //主角
     public List<PlayerController> players;              //更新為新的playerInput
     public Player NowLeadPlayer;                        //領頭玩家
     public CommandType[] OurInput = new CommandType[4]; //總輸入
