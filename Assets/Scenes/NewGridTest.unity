@@ -1261,7 +1261,7 @@ MonoBehaviour:
     ThisPlayerData: {fileID: 11400000, guid: 3a8bdea079e9718488d659a0fd6f2a65, type: 2}
     oripos: {x: 0, y: 0, z: 0}
   LeaderMark: {fileID: 113593847}
-  InformationBoard: {fileID: 0}
+  InformationBoard: {fileID: 172161652}
 --- !u!95 &322022345
 Animator:
   serializedVersion: 4
@@ -4144,7 +4144,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 894013805ffba674d8015cbf86a7cbf9, type: 3}
   - {fileID: 21300000, guid: 462cfe44b63534740b3e567a98b1d513, type: 3}
   - {fileID: 21300000, guid: 4204ebad2d51d1d4da862b99cb9de286, type: 3}
-  MainUIAnimator: {fileID: 0}
+  MainUIAnimator: {fileID: 322022345}
   CurrentRound: 0
   RoundLastTime: 20
   currentState: 0
