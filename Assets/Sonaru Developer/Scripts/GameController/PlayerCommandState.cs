@@ -8,30 +8,30 @@ using UnityEngine;
 
 public class PlayerCommandState : IState
 {
+    private float countdownTimer;
+    
     public GameController Controller { get; set; }
     public void OnStateEnter(GameController controller)
     {
-        Debug.Log("PlayerCommand Start");
         Controller = controller;
-        controller.StartTimer();
+
+        countdownTimer = Controller.RoundLastTime;
         //Reset countdown timer 
         
         // change player command order
-        
+        Controller.NowLeadPlayer = Controller.LeaderChange(Controller.NowLeadPlayer);
     }
 
     public void OnStateStay()
     {
         // wait player command until time finished
-        if (Controller.StartCountDown)
+        countdownTimer -= Time.deltaTime;
+        if (countdownTimer <= 0)
         {
-            Controller.RoundLastTime -= Time.deltaTime;
-            if (Controller.RoundLastTime<=0)
-            {
-                Controller.StartCountDown = false;
-                Debug.Log("小王八蛋給我按喔");
-            }
-        }        
+            Debug.Log("小王八蛋給我按喔");
+            Controller.ChangeState(StateEnum.CharacterMove);
+        }
+             
         if (Controller.AllChecked())
         {
             Controller.ChangeState(StateEnum.CharacterMove);

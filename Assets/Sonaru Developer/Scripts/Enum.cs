@@ -12,11 +12,12 @@ public enum StateEnum
 
 public enum CommandType
 {
+    NOTHING,
     Up,
     Right,
     Down,
     Left,
-    NOTHING
+    
 }
 [System.Serializable]
 public enum Player

@@ -7,10 +7,7 @@ public class CharacterMoveState : IState
     public void OnStateEnter(GameController controller)
     {
         Controller = controller;
-        foreach (var player in Controller.players)
-        {
-            Debug.Log(player.Input.Command);
-        }
+        
     }
 
     public void OnStateStay()
