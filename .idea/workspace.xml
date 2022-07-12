@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e095c8b5-7a2e-426f-ba16-e6b1969b98d1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/BasicBlock.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/BasicBlock.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/EarthPoint.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/EarthPoint.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/FirePoint.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/FirePoint.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/Points.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/Points.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/Road.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/Road.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/Wall.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/Wall.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/WaterPoint.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/WaterPoint.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/WindPoint.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/WindPoint.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row0.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row0.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row10.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row10.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row11.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row11.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row2.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row2.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row3.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row3.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row4.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row4.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row5.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row5.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row6.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row6.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row7.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row7.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row8.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row8.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row9.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row9.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.XML" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.XML.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/readme.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/Character.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/Character/MainCharacter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/Character/MainCharacter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Map/NewMap.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Map/NewMap.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row1.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/Row/Row1.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/script/BackTrap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/BackTrap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/script/BackTrap.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/BackTrap.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/script/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/Block.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/script/Block.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/BlockType/Block.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/script/MapSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Darkcat/SO/MapItem/script/MapSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewGridTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/NewGridTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/Enum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/Enum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/GameController/CharacterMoveState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/GameController/CharacterMoveState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/GameController/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sonaru Developer/Scripts/GameController/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2BpHV9Xybyliq8oSRzEuFDMmh94" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e095c8b5-7a2e-426f-ba16-e6b1969b98d1" name="Changes" comment="" />
+      <created>1657596127953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657596127953</updated>
+    </task>
+    <servers />
+  </component>
+</project>
