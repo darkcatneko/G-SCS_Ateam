@@ -3,29 +3,37 @@ using UnityEngine;
 
 public class CharacterMoveState : IState
 {
-    
+    private int targetCommand = 0;
+    private bool allMoveFinish = false;
     public GameController Controller { get; set; }
     public void OnStateEnter(GameController controller)
     {
         Controller = controller;
-        foreach (var command in Controller.OurInput)
-        {
-            Debug.Log(command);
-        }
+        targetCommand = 0;
+        allMoveFinish = false;
     }
 
     public void OnStateStay()
     {
         // Start move character
-        
-        // Check if all player not left any move point -> go to game over state
-        
-        // Check if any player get enough points -> go to game over state
-        
-        // Random decide if go to special event
-        
-        // else: round + 1 -> go to player command state
-        
+        if (Controller.Character.MoveOver && !allMoveFinish)
+        {
+            Controller.Character.CommandMoveCharacter(Controller.OurInput[targetCommand]);
+            targetCommand++;
+            allMoveFinish = targetCommand == Controller.OurInput.Length - 1;
+        }
+
+        if (allMoveFinish)
+        {
+            // Check if all player not left any move point -> go to game over state
+                    
+            // Check if any player get enough points -> go to game over state
+            
+            // Random decide if go to special event
+            
+            // else: round + 1 -> go to player command state
+            Controller.ChangeState(StateEnum.PlayerCommand);
+        }
     }
 
     public void OnStateExit()
