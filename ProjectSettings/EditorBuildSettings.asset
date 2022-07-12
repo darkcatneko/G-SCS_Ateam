@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sonaru Developer/Grid.unity
     guid: 77bc630fc75ae464ba03b03287a4d62a
+  - enabled: 1
+    path: Assets/Scenes/NewGridTest.unity
+    guid: 7ee0e1cb56b01324f8b8b8754a985552
   m_configObjects: {}

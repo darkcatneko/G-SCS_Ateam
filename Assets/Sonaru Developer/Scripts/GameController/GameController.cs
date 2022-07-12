@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     public int CurrentRound;
     //public bool CanInput = false;
     //public bool IsLastRound => CurrentRound >= TotalRound;
-    public float RoundLastTime = 5;
+    public float RoundLastTime = 20;
     //public bool StartCountDown = false;
     
     [SerializeField] private StateEnum currentState;
