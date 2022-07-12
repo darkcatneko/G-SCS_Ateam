@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Darkcat/scene/MainGameScene.unity
     guid: d080d61fadd95ff40ac0e667d9a76917
   - enabled: 1
-    path: Assets/Darkcat/scene/TwoControllerPlayerSign.unity
+    path: Assets/Scenes/TwoControllerPlayerSign.unity
     guid: 8da9c16a57df5b945a119b0ac6661caf
   - enabled: 1
     path: Assets/Sonaru Developer/Grid.unity

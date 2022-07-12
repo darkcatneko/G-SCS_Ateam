@@ -1,27 +1,33 @@
 ﻿
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMoveState : IState
 {
-    private int targetCommand = 0;
+    //private int targetCommand = 0;
     private bool allMoveFinish = false;
     public GameController Controller { get; set; }
     public void OnStateEnter(GameController controller)
     {
         Controller = controller;
-        targetCommand = 0;
+        //targetCommand = 0;
         allMoveFinish = false;
+
+        Controller.StartCoroutine(MoveAllPlayer(() => { allMoveFinish = true; }));
     }
 
     public void OnStateStay()
     {
         // Start move character
-        if (Controller.Character.MoveOver && !allMoveFinish)
-        {
-            Controller.Character.CommandMoveCharacter(Controller.OurInput[targetCommand]);
-            targetCommand++;
-            allMoveFinish = targetCommand == Controller.OurInput.Length - 1;
-        }
+        // if (Controller.Character.MoveOver && !allMoveFinish)
+        // {
+        //     Debug.Log(targetCommand + ": " + Controller.OurInput[targetCommand]);
+        //     Controller.Character.CommandMoveCharacter(Controller.OurInput[targetCommand]);
+        //     allMoveFinish = targetCommand == Controller.OurInput.Length - 1;
+        //     if(!allMoveFinish) targetCommand++;
+        // }
 
         if (allMoveFinish)
         {
@@ -39,5 +45,23 @@ public class CharacterMoveState : IState
     public void OnStateExit()
     {
         Controller.CurrentRound++;
+    }
+
+    private IEnumerator MoveAllPlayer(Action onFinish = null)
+    {
+        foreach (var t in Controller.OurInput)
+        {
+            yield return WaitForMoveOver(t);
+        }
+        onFinish?.Invoke();
+    }
+
+    private IEnumerator WaitForMoveOver(CommandType command)
+    {
+        Controller.Character.CommandMoveCharacter(command);
+        while (!Controller.Character.MoveOver)
+        {
+            yield return null;
+        }
     }
 }

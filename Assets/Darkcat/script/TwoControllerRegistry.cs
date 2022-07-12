@@ -10,6 +10,9 @@ public class TwoControllerRegistry : MonoBehaviour
     public static TwoControllerRegistry instance;
     public GamePadRegistry Player1and2;
     public GamePadRegistry Player3and4;
+    public Animator P12;
+    public Animator P34;
+    public Animator Maincanvas;
     private void Awake()
     {
         instance = this;
@@ -26,7 +29,7 @@ public class TwoControllerRegistry : MonoBehaviour
     {
         if (Player1and2.isChecked && Player3and4.isChecked)
         {
-            
+            Maincanvas.SetBool("AllSure", true);
         }
         //production
         foreach (Gamepad g in Gamepad.all)
@@ -37,9 +40,11 @@ public class TwoControllerRegistry : MonoBehaviour
                 {
                     Debug.Log("next scene");
                     //SceneManager.LoadScene("MainGameScene");
-                    SceneManager.LoadScene("NewGridTest");
+                    //SceneManager.LoadScene("NewGridTest");
+                    Maincanvas.SetBool("IntoGame", true);
                 }
             }
         }
     }
+      
 }

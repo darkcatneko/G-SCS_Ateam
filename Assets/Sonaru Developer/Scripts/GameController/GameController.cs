@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -56,12 +58,7 @@ public class GameController : MonoBehaviour
 
     public bool AllChecked()
     {
-        foreach (var player in players)
-        {
-            if (!player.Sure) return false;
-        }
-
-        return true;
+        return players.All(player => player.Sure);
     }
     
     public Player LeaderChange(Player Now)
@@ -91,4 +88,12 @@ public class GameController : MonoBehaviour
             OurInput[i] = Find_PC((int)NowLeadPlayer + i).My_Command;
         }
     }
+
+    private IEnumerator DelayDo(float delay, Action onFinish = null)
+    {
+        yield return new WaitForSeconds(delay);
+        onFinish?.Invoke();
+    }
+    
+    
 }
