@@ -78,16 +78,16 @@ public class MainCharacter : MonoBehaviour
         rotateTweener?.Kill();
         // Count rotate angle
         if (command == CommandType.Up) rotateTweener = transform.DORotate(new Vector3(0,0,0), RotateDuration);
-        if (command == CommandType.Down) rotateTweener = transform.DORotate(new Vector3(0,90,0), RotateDuration);
-        if (command == CommandType.Left) rotateTweener = transform.DORotate(new Vector3(0,180,0), RotateDuration);
-        if (command == CommandType.Right) rotateTweener = transform.DORotate(new Vector3(0,-90,0), RotateDuration);
+        if (command == CommandType.Down) rotateTweener = transform.DORotate(new Vector3(0,180,0), RotateDuration);
+        if (command == CommandType.Left) rotateTweener = transform.DORotate(new Vector3(0,-90,0), RotateDuration);
+        if (command == CommandType.Right) rotateTweener = transform.DORotate(new Vector3(0,90,0), RotateDuration);
         rotateTweener.onComplete += OnRotateFinish;
         rotateTweener.Play();
 
         return targetBlock.ThisBlockType == BlockType.Empty || targetBlock.ThisBlockType == BlockType.Point;
     }
 
-    private async void OnRotateFinish()
+    private void OnRotateFinish()
     {
         if (targetBlock == null)
         {

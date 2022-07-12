@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
                     LSIP = true;
                     Sure = !Sure;
                 }
-                if (My_GamePad._gamepad.leftShoulder.isPressed)
+                if (My_GamePad._gamepad.leftTrigger.isPressed)
                 {
                     My_Command = CommandType.NOTHING;
                     //Debug.Log((int)this.player);

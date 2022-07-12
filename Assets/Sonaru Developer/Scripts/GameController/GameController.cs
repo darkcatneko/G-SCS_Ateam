@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -91,4 +92,12 @@ public class GameController : MonoBehaviour
             OurInput[i] = Find_PC((int)NowLeadPlayer + i).My_Command;
         }
     }
+
+    private IEnumerator DelayDo(float delay, Action onFinish = null)
+    {
+        yield return new WaitForSeconds(delay);
+        onFinish?.Invoke();
+    }
+    
+    
 }

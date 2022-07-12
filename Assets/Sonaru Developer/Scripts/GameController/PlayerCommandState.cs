@@ -19,6 +19,8 @@ public class PlayerCommandState : IState
         foreach (var player in Controller.players)
         {
             player.CanInput = true;
+            player.Sure = false;
+            player.My_Command = CommandType.NOTHING;
         }
         
         //Reset countdown timer 
