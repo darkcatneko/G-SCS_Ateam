@@ -37,7 +37,7 @@ public class TwoControllerRegistry : MonoBehaviour
                 {
                     Debug.Log("next scene");
                     //SceneManager.LoadScene("MainGameScene");
-                    SceneManager.LoadScene("Grid");
+                    SceneManager.LoadScene("NewGridTest");
                 }
             }
         }
