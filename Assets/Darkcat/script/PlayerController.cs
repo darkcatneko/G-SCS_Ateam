@@ -6,11 +6,11 @@ using UnityEngine.InputSystem.Controls;
 
 public class PlayerController : MonoBehaviour
 {
-    public GamePadRegistry My_GamePad;//µù¥Uªº¤â§â
-    public PlayerDataSo playerData; //ª±®a¼Æ­È   
-    public Player player;//­ş­Óª±®a
-    public CommandType My_Command = CommandType.NOTHING;//²{¦b¿é¤Jªº«ü¥O
-    public bool Sure = false;    //½T»{¿é¤J
+    public GamePadRegistry My_GamePad;//è¨»å†Šçš„æ‰‹æŠŠ
+    public PlayerDataSo playerData; //ç©å®¶æ•¸å€¼   
+    public Player player;//å“ªå€‹ç©å®¶
+    public CommandType My_Command = CommandType.NOTHING;//ç¾åœ¨è¼¸å…¥çš„æŒ‡ä»¤
+    public bool Sure = false;    //ç¢ºèªè¼¸å…¥
     public bool CanInput = false;
 
     private bool RSIP;
