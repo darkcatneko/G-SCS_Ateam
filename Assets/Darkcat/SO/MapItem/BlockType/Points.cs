@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Points : Block
 {
-    [SerializeField] ElementType This_ELEMENT;
+    [SerializeField] public ElementType This_ELEMENT;
    public void GainPoint()
     {
         switch(This_ELEMENT)
