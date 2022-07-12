@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public int TotalRound;
-    public List<FakePlayer> players;
+    public List<PlayerController> players;
     public int CurrentRound;
     public bool CanInput = false;
     //public bool IsLastRound => CurrentRound >= TotalRound;
@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
     {
         foreach (var player in players)
         {
-            if (!player.Input.IsChecked) return false;
+            if (!player.Sure) return false;
         }
 
         return true;
