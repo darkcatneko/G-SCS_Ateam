@@ -6,7 +6,9 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public int TotalRound;
-    public List<FakePlayer> players;
+    public List<PlayerController> players;//更新為新的playerInput
+    public Player NowLeadPlayer;//領頭玩家
+    public CommandType[] OurInput = new CommandType[4];//總輸入
     public int CurrentRound;
     public bool CanInput = false;
     //public bool IsLastRound => CurrentRound >= TotalRound;
@@ -54,7 +56,7 @@ public class GameController : MonoBehaviour
     {
         foreach (var player in players)
         {
-            if (!player.Input.IsChecked) return false;
+            if (!player.Sure) return false;
         }
 
         return true;
@@ -64,5 +66,32 @@ public class GameController : MonoBehaviour
     {
         RoundLastTime = 5;
         StartCountDown = true;
+    }
+    public Player LeaderChange(Player Now)
+    {
+        switch((int)Now)
+        {
+            case 0:
+                return Player.Player2;
+            case 1:
+                return Player.Player3;
+            case 2:
+                return Player.Player4;
+            case 3:
+                return Player.Player1;
+            default:
+                return Player.Player1;
+        }
+    }
+    public PlayerController Find_PC(int Playernum)
+    {
+        return players[Playernum % 4];
+    }
+    public void CollectInput()
+    {
+        for (int i = 0; i < OurInput.Length; i++)
+        {
+            OurInput[i] = Find_PC((int)NowLeadPlayer + i).My_Command;
+        }
     }
 }

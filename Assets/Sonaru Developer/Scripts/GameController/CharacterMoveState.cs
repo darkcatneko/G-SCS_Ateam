@@ -21,6 +21,8 @@ public class CharacterMoveState : IState
         
         // Check if any player get enough points -> go to game over state
         
+        // Random decide if go to special event
+        
         // else: round + 1 -> go to player command state
         
     }

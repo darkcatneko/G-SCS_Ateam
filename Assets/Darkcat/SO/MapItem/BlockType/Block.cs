@@ -12,10 +12,11 @@ public enum BlockType
     Point,
 }
 
-[CreateAssetMenu(fileName = "NewBlock", menuName = "Block/BasicBlock")]
+
 public abstract class Block : ScriptableObject
 {
     public BlockType ThisBlockType;
     public UnityEvent SP_event = new UnityEvent();
     
 }
+
