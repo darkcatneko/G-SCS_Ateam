@@ -99,12 +99,14 @@ public class GameController : MonoBehaviour
     {
         MainGameUIController.instance.InformationBoard.transform.Find(which).GetComponent<Image>().sprite = commandPic[(int)OurInput[num]];
     }
+    
+    // Duration : 3.5f
     public void CallInformationAnimation()
     {
         MainUIAnimator.SetTrigger("FinishInput");
     }
 
-    private IEnumerator DelayDo(float delay, Action onFinish = null)
+    public IEnumerator DelayDo(float delay, Action onFinish = null)
     {
         yield return new WaitForSeconds(delay);
         onFinish?.Invoke();

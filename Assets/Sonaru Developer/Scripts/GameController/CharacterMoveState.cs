@@ -8,14 +8,20 @@ public class CharacterMoveState : IState
 {
     //private int targetCommand = 0;
     private bool allMoveFinish = false;
+    //private bool commandPicAnim = false;
     public GameController Controller { get; set; }
     public void OnStateEnter(GameController controller)
     {
         Controller = controller;
         //targetCommand = 0;
         allMoveFinish = false;
+        Controller.CallInformationAnimation();
 
-        Controller.StartCoroutine(MoveAllPlayer(() => { allMoveFinish = true; }));
+        Controller.StartCoroutine((Controller.DelayDo(3.5f, () =>
+        {
+            Controller.StartCoroutine(MoveAllPlayer(() => { allMoveFinish = true; }));
+        })));
+        
     }
 
     public void OnStateStay()
