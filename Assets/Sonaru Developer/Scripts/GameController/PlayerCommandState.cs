@@ -30,6 +30,8 @@ public class PlayerCommandState : IState
 
         // change player command order
         Controller.NowLeadPlayer = Controller.LeaderChange(Controller.NowLeadPlayer);
+        // change the marker on the ui
+        MainGameUIController.instance.ChangeLeaderMark((int)Controller.NowLeadPlayer);
     }
 
     public void OnStateStay()

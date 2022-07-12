@@ -9,7 +9,9 @@ public class MainGameUIController : MonoBehaviour
 {
     public static MainGameUIController instance;
     public GameController MainData;
-    public PlayerUI[] Displays = new PlayerUI[4];    
+    public PlayerUI[] Displays = new PlayerUI[4];
+    public Image LeaderMark;
+    public GameObject InformationBoard;
 
     private void Awake()
     {
@@ -22,7 +24,10 @@ public class MainGameUIController : MonoBehaviour
             player.setOri();
         }
     }
-
+    public void ChangeLeaderMark(int NextPlayer)
+    {
+        LeaderMark.transform.DOMove(new Vector3(450f+NextPlayer*470f, 163f, 0), 0.5f);
+    }
     // Update is called once per frame
     void Update()
     {
