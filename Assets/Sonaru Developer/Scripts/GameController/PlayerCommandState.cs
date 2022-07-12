@@ -14,10 +14,16 @@ public class PlayerCommandState : IState
     public void OnStateEnter(GameController controller)
     {
         Controller = controller;
-
-        countdownTimer = Controller.RoundLastTime;
-        //Reset countdown timer 
         
+        // open player input
+        foreach (var player in Controller.players)
+        {
+            player.CanInput = true;
+        }
+        
+        //Reset countdown timer 
+        countdownTimer = Controller.RoundLastTime;
+
         // change player command order
         Controller.NowLeadPlayer = Controller.LeaderChange(Controller.NowLeadPlayer);
     }
@@ -40,6 +46,11 @@ public class PlayerCommandState : IState
 
     public void OnStateExit()
     {
+        // close player input
+        foreach (var player in Controller.players)
+        {
+            player.CanInput = false;
+        }
         // Get all commands
         Controller.CollectInput();
     }
