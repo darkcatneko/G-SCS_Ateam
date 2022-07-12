@@ -829,6 +829,7 @@ GameObject:
   - component: {fileID: 371652977}
   - component: {fileID: 371652976}
   - component: {fileID: 371652975}
+  - component: {fileID: 371652979}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -914,6 +915,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371652979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371652974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bae60a144ea0d449a78bdf82a52388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotateDuration: 0.5
+  MoveSpeed: 1
+  worldMap: {fileID: 11400000, guid: bf07880b296e35e43b8642566103cf8c, type: 2}
+  rowPos: 0
+  colPos: 0
+  targetBlock: {fileID: 0}
 --- !u!1 &385570243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,6 +2714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalRound: 0
+  Character: {fileID: 0}
   players:
   - {fileID: 2056245921}
   - {fileID: 307557601}
@@ -9166,7 +9186,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3338029, y: 1}
+    m_SensorSize: {x: 2.7697198, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9954,7 +9974,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29282
+  m_Name: pb_Mesh99758
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

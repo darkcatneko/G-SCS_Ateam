@@ -13,13 +13,13 @@ public class MainCharacter : MonoBehaviour
     public MapSO worldMap;
     [SerializeField] private int rowPos;
     [SerializeField] private int colPos;
-    [SerializeField] private CommandType nowFaceDir;
+    //[SerializeField] private CommandType nowFaceDir;
     [SerializeField] private Block targetBlock;
     private Tweener rotateTweener;
 
     private void Awake()
     {
-        nowFaceDir = CommandType.Up;
+        //nowFaceDir = CommandType.Up;
     }
 
     private void Update()
