@@ -3375,7 +3375,7 @@ MonoBehaviour:
   NowLeadPlayer: 0
   OurInput: 00000000000000000000000000000000
   CurrentRound: 0
-  RoundLastTime: 5
+  RoundLastTime: 20
   currentState: 0
 --- !u!1001 &1086826422
 PrefabInstance:
