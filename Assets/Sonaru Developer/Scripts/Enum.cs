@@ -13,9 +13,9 @@ public enum StateEnum
 public enum CommandType
 {
     Up,
+    Right,
     Down,
     Left,
-    Right,
     NOTHING
 }
 [System.Serializable]
