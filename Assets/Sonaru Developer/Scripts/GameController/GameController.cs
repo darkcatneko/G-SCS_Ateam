@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class GameController : MonoBehaviour
@@ -12,6 +13,8 @@ public class GameController : MonoBehaviour
     public List<PlayerController> players;              //更新為新的playerInput
     public Player NowLeadPlayer;                        //領頭玩家
     public CommandType[] OurInput = new CommandType[4]; //總輸入
+    [SerializeField] Sprite[] commandPic;               //圖庫
+    public Animator MainUIAnimator;                     //UI動畫器
     public int CurrentRound;
     //public bool CanInput = false;
     //public bool IsLastRound => CurrentRound >= TotalRound;
@@ -87,9 +90,23 @@ public class GameController : MonoBehaviour
         {
             OurInput[i] = Find_PC((int)NowLeadPlayer + i).My_Command;
         }
+        ChangeCommandPic("FirstCommand", 0);
+        ChangeCommandPic("SecondCommand", 1);
+        ChangeCommandPic("ThirdCommand", 2);
+        ChangeCommandPic("FourCommand", 3);
+    }
+    public void ChangeCommandPic(string which,int num)
+    {
+        MainGameUIController.instance.InformationBoard.transform.Find(which).GetComponent<Image>().sprite = commandPic[(int)OurInput[num]];
+    }
+    
+    // Duration : 3.5f
+    public void CallInformationAnimation()
+    {
+        MainUIAnimator.SetTrigger("FinishInput");
     }
 
-    private IEnumerator DelayDo(float delay, Action onFinish = null)
+    public IEnumerator DelayDo(float delay, Action onFinish = null)
     {
         yield return new WaitForSeconds(delay);
         onFinish?.Invoke();
