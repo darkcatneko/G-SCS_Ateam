@@ -8,17 +8,28 @@ public class MapSO : ScriptableObject
 {
     public List<Row> ThisMap = new List<Row>();
 
-    public Block GetBlockData(int rowIndex, int colIndex)
+    public Block GetBlockData(int ColIndex, int RowIndex)
     {
         // Check if the row exist
-        if (rowIndex >= ThisMap.Count) return null;
+        if (ColIndex >= ThisMap.Count) return null;
         
-        var currentRow = ThisMap[rowIndex];
+        var currentRow = ThisMap[ColIndex];
         
         // check if the column exist
-        if (colIndex >= currentRow.ThisRow.Count) return null;
+        if (RowIndex >= currentRow.ThisRow.Count) return null;
         
-        var currentBlock = currentRow.ThisRow[colIndex];
+        var currentBlock = currentRow.ThisRow[RowIndex];
         return currentBlock;
+    }
+
+
+    public Vector3 GetWorldPosition(int ColIndex, int RowIndex)
+    {
+        Vector3 originPos = new Vector3(-105, 7.5f, 110);
+        var cellSize = 15;
+        var xPos = ColIndex * cellSize + cellSize * .5f;
+        var zPos = -RowIndex * cellSize - cellSize * .5f;
+
+        return originPos + new Vector3(xPos, 0, zPos);
     }
 }

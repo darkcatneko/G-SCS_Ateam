@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,32 +10,43 @@ using UnityEngine.InputSystem.Controls;
 public class MainCharacter : MonoBehaviour
 {
     public float RotateDuration;
-    public float MoveSpeed;
+    public float MoveDuration;
     public MapSO worldMap;
+    
     [SerializeField] private int rowPos;
     [SerializeField] private int colPos;
     //[SerializeField] private CommandType nowFaceDir;
     [SerializeField] private Block targetBlock;
     private Tweener rotateTweener;
-
+    private Tweener moveTweener;
+    
+    public bool MoveOver;
+    
+    public void SetOriginPos(int col, int row)
+    {
+        colPos = col;
+        rowPos = row;
+    }
+    
     private void Awake()
     {
         //nowFaceDir = CommandType.Up;
+        MoveOver = true;
+        //Debug.Log(worldMap.GetBlockData(4,7));
     }
 
     private void Update()
     {
-        foreach (Gamepad g in Gamepad.all)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            if (g.buttonEast.wasPressedThisFrame)
-            {
-                CommandMoveCharacter(CommandType.Right);
-            }
+            CommandMoveCharacter(CommandType.Up);
         }
+        
     }
 
     public void CommandMoveCharacter(CommandType command)
     {
+        MoveOver = false;
         switch (command)
         {
             case CommandType.Up:
@@ -74,7 +86,7 @@ public class MainCharacter : MonoBehaviour
         return targetBlock.ThisBlockType == BlockType.Empty || targetBlock.ThisBlockType == BlockType.Point;
     }
 
-    private void OnRotateFinish()
+    private async void OnRotateFinish()
     {
         if (targetBlock == null)
         {
@@ -95,9 +107,15 @@ public class MainCharacter : MonoBehaviour
         else
         {
             // Target block can move
-            Debug.Log("GO GO GO !");
-            targetBlock = null;
+            // Up: x+ ; Right: z-;
+            Debug.Log("GO !");
+            moveTweener?.Kill();
+            moveTweener = transform.DOMove(worldMap.GetWorldPosition(rowPos, colPos), MoveDuration);
+            moveTweener.onComplete += () => MoveOver = true;
+            moveTweener.Play();
+            //Debug.Log(worldMap.GetBlockData(colPos,rowPos));
             
+            targetBlock = null;
         }
     }
 }
