@@ -16,13 +16,15 @@ public class PlayerCommandState : IState
         Controller = controller;
         
         // open player input
-        foreach (var player in Controller.players)
+        for (var i = 0; i < Controller.players.Count; i++)
         {
+            var player = Controller.players[i];
             player.CanInput = true;
             player.Sure = false;
             player.My_Command = CommandType.NOTHING;
+            MainGameUIController.instance.Displays[i].PlayerUIOutLine.SetActive(false);
         }
-        
+
         //Reset countdown timer 
         countdownTimer = Controller.RoundLastTime;
 
