@@ -25,10 +25,10 @@ public class MapSO : ScriptableObject
 
     public Vector3 GetWorldPosition(int ColIndex, int RowIndex)
     {
-        Vector3 originPos = new Vector3(-105, 7.5f, 110);
-        var cellSize = 15;
-        var xPos = ColIndex * cellSize + cellSize * .5f;
-        var zPos = -RowIndex * cellSize - cellSize * .5f;
+        Vector3 originPos = new Vector3(-110, 7.5f, 110);
+        var cellSize = 20;
+        var xPos = RowIndex * cellSize + cellSize * .5f;
+        var zPos = -ColIndex * cellSize - cellSize * .5f;
 
         return originPos + new Vector3(xPos, 0, zPos);
     }

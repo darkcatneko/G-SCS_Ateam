@@ -42,7 +42,7 @@ public class GamePadRegistry : MonoBehaviour
                         isChecked = true;                      
                         PlayerManager.playerList.Add(g, this);
                         LeftDpad = _gamepad.dpad;
-                        Debug.Log(check.ToString());
+                        Debug.Log( g.name + ": " + check.ToString());
                         return;
                     }
                 }
@@ -54,7 +54,7 @@ public class GamePadRegistry : MonoBehaviour
                         isChecked = true;
                         PlayerManager.playerList.Add(g, this);
                         LeftDpad = _gamepad.dpad;
-                        Debug.Log(check.ToString());
+                        Debug.Log(g.name + ": " + check.ToString());
                         return;
                     }
                 }

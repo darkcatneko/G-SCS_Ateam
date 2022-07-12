@@ -18,12 +18,13 @@ public class CharacterMoveState : IState
         // Start move character
         if (Controller.Character.MoveOver && !allMoveFinish)
         {
+            Debug.Log(targetCommand + ": " + Controller.OurInput[targetCommand]);
             Controller.Character.CommandMoveCharacter(Controller.OurInput[targetCommand]);
-            targetCommand++;
             allMoveFinish = targetCommand == Controller.OurInput.Length - 1;
+            if(!allMoveFinish) targetCommand++;
         }
 
-        if (allMoveFinish)
+        if (Controller.Character.MoveOver && allMoveFinish)
         {
             // Check if all player not left any move point -> go to game over state
                     

@@ -48,33 +48,33 @@ public class PlayerController : MonoBehaviour
                 if (My_GamePad._gamepad.buttonEast.isPressed)
                 {
                     My_Command = CommandType.Right;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
                 if (My_GamePad._gamepad.buttonWest.isPressed)
                 {
                     My_Command = CommandType.Left;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
                 if (My_GamePad._gamepad.buttonNorth.isPressed)
                 {
                     My_Command = CommandType.Up;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
                 if (My_GamePad._gamepad.buttonSouth.isPressed)
                 {
                     My_Command = CommandType.Down;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
                 if (My_GamePad._gamepad.rightShoulder.isPressed&&RSIP == false)
                 {
-                    Debug.Log("shoulderpress");
+                    //Debug.Log("shoulderpress");
                     RSIP = true;
                     Sure = !Sure;
                 }
                 if (My_GamePad._gamepad.rightTrigger.isPressed)
                 {
                     My_Command = CommandType.NOTHING;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
             }
             if (player == Player.Player2 || player == Player.Player4)
@@ -82,33 +82,33 @@ public class PlayerController : MonoBehaviour
                 if (My_GamePad.LeftDpad.ReadValue() == new Vector2(1, 0))
                 {
                     My_Command = CommandType.Right;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
                 if (My_GamePad.LeftDpad.ReadValue() == new Vector2(-1, 0))
                 {
                     My_Command = CommandType.Left;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
                 if (My_GamePad.LeftDpad.ReadValue() == new Vector2(0, 1))
                 {
                     My_Command = CommandType.Up;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
                 if (My_GamePad.LeftDpad.ReadValue() == new Vector2(-1, 0))
                 {
                     My_Command = CommandType.Down;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
                 if (My_GamePad._gamepad.leftShoulder.isPressed && LSIP == false)
                 {
-                    Debug.Log("shoulderpress");
+                    //Debug.Log("shoulderpress");
                     LSIP = true;
                     Sure = !Sure;
                 }
                 if (My_GamePad._gamepad.leftShoulder.isPressed)
                 {
                     My_Command = CommandType.NOTHING;
-                    Debug.Log((int)this.player);
+                    //Debug.Log((int)this.player);
                 }
             }
 
