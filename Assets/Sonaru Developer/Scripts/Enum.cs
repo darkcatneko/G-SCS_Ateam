@@ -18,8 +18,14 @@ public enum CommandType
     Right,
     NOTHING
 }
+[System.Serializable]
 public enum Player
 {
     Player1, Player2, Player3, Player4
+}
+[System.Serializable]
+public enum ElementType
+{
+    Fire,Water,Wind,Earth
 }
 
