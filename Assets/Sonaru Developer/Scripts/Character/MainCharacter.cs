@@ -66,6 +66,7 @@ public class MainCharacter : MonoBehaviour
                 break;
             
             case CommandType.NOTHING:
+                MoveOver = true;
                 break;
         }
     }
