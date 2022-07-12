@@ -9,7 +9,7 @@ public class MainGameUIController : MonoBehaviour
 {
     public static MainGameUIController instance;
     public GameController MainData;
-    public PlayerUI[] Displays = new PlayerUI[4];
+    public PlayerUI[] Displays = new PlayerUI[4];    
 
     private void Awake()
     {
