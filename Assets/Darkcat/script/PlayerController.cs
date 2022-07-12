@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (My_GamePad._gamepad.buttonEast.isPressed)
                 {
-                    My_Command = CommandType.Right;
+                    My_Command = CommandType.Right;                    
                     //Debug.Log((int)this.player);
                 }
                 if (My_GamePad._gamepad.buttonWest.isPressed)
@@ -68,8 +68,10 @@ public class PlayerController : MonoBehaviour
                 if (My_GamePad._gamepad.rightShoulder.isPressed&&RSIP == false)
                 {
                     //Debug.Log("shoulderpress");
+                    MainGameUIController.instance.SureFeedBack((int)player);
                     RSIP = true;
                     Sure = !Sure;
+                    MainGameUIController.instance.Displays[(int)player].PlayerUIOutLine.SetActive(Sure);
                 }
                 if (My_GamePad._gamepad.rightTrigger.isPressed)
                 {
@@ -94,7 +96,7 @@ public class PlayerController : MonoBehaviour
                     My_Command = CommandType.Up;
                     //Debug.Log((int)this.player);
                 }
-                if (My_GamePad.LeftDpad.ReadValue() == new Vector2(-1, 0))
+                if (My_GamePad.LeftDpad.ReadValue() == new Vector2(0, -1))
                 {
                     My_Command = CommandType.Down;
                     //Debug.Log((int)this.player);
@@ -102,8 +104,10 @@ public class PlayerController : MonoBehaviour
                 if (My_GamePad._gamepad.leftShoulder.isPressed && LSIP == false)
                 {
                     //Debug.Log("shoulderpress");
+                    MainGameUIController.instance.SureFeedBack((int)player);                   
                     LSIP = true;
                     Sure = !Sure;
+                    MainGameUIController.instance.Displays[(int)player].PlayerUIOutLine.SetActive(Sure);
                 }
                 if (My_GamePad._gamepad.leftTrigger.isPressed)
                 {
