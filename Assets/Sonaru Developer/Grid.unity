@@ -148,7 +148,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601283886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e45f4ad5de1647c8a304e5a8925b3e4f, type: 3}
   m_Name: 
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701067178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e45f4ad5de1647c8a304e5a8925b3e4f, type: 3}
   m_Name: 
@@ -301,13 +301,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8647b41cb73f480989358027a6b1ef8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalRound: 3
+  TotalRound: 10
   players:
-  - {fileID: 701067179}
-  - {fileID: 601283887}
-  - {fileID: 1040109714}
-  - {fileID: 1465506666}
-  CanInput: 0
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  NowLeadPlayer: 0
+  OurInput: 00000000000000000000000000000000
+  CurrentRound: 0
+  RoundLastTime: 5
   currentState: 0
 --- !u!1 &904875208
 GameObject:
@@ -449,7 +452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040109713}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e45f4ad5de1647c8a304e5a8925b3e4f, type: 3}
   m_Name: 
@@ -564,7 +567,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465506665}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e45f4ad5de1647c8a304e5a8925b3e4f, type: 3}
   m_Name: 

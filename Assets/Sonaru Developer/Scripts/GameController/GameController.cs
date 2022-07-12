@@ -6,14 +6,14 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public int TotalRound;
-    public List<PlayerController> players;//更新為新的playerInput
-    public Player NowLeadPlayer;//領頭玩家
-    public CommandType[] OurInput = new CommandType[4];//總輸入
+    public List<PlayerController> players;              //更新為新的playerInput
+    public Player NowLeadPlayer;                        //領頭玩家
+    public CommandType[] OurInput = new CommandType[4]; //總輸入
     public int CurrentRound;
     //public bool CanInput = false;
     //public bool IsLastRound => CurrentRound >= TotalRound;
     public float RoundLastTime = 5;
-    public bool StartCountDown = false;
+    //public bool StartCountDown = false;
     
     [SerializeField] private StateEnum currentState;
     private Dictionary<StateEnum, IState> allStateDict;
@@ -62,12 +62,7 @@ public class GameController : MonoBehaviour
 
         return true;
     }
-
-    public void StartTimer()
-    {
-        RoundLastTime = 5;
-        StartCountDown = true;
-    }
+    
     public Player LeaderChange(Player Now)
     {
         switch((int)Now)
