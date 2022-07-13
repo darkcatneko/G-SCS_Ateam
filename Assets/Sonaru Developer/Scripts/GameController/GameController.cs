@@ -111,6 +111,4 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(delay);
         onFinish?.Invoke();
     }
-    
-    
 }
