@@ -66,10 +66,10 @@ Material:
     - _Depth: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smooth: 0.8
+    - _Smooth: 0.75
     - _addValue: -10.66
     m_Colors:
-    - Color_0e1428c8670e49598e88241a19f02761: {r: 0.844, g: 0.9178947, b: 1, a: 1}
-    - Color_1: {r: 0.55745727, g: 0.79177153, b: 1.4330522, a: 1}
+    - Color_0e1428c8670e49598e88241a19f02761: {r: 0.538, g: 0.7589564, b: 1, a: 1}
+    - Color_1: {r: 0.83189034, g: 1.1757383, b: 2.1185474, a: 1}
     - _MainMatColor: {r: 0.7019608, g: 0.8431372, b: 1, a: 1}
   m_BuildTextureStacks: []
