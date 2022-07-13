@@ -28,14 +28,6 @@ public class CharacterMoveState : IState
 
     public void OnStateStay()
     {
-        // Start move character
-        // if (Controller.Character.MoveOver && !allMoveFinish)
-        // {
-        //     Debug.Log(targetCommand + ": " + Controller.OurInput[targetCommand]);
-        //     Controller.Character.CommandMoveCharacter(Controller.OurInput[targetCommand]);
-        //     allMoveFinish = targetCommand == Controller.OurInput.Length - 1;
-        //     if(!allMoveFinish) targetCommand++;
-        // }
 
         if (allMoveFinish)
         {
@@ -48,7 +40,7 @@ public class CharacterMoveState : IState
             // Random decide if go to special event (If time enough)
             
             // else: round + 1 -> go to player command state
-            Controller.ChangeState(StateEnum.PlayerCommand);
+            else Controller.ChangeState(StateEnum.PlayerCommand);
         }
     }
 
