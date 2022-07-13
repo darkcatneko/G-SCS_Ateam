@@ -33,7 +33,8 @@ public enum ElementType
 
 public enum SFXType
 {
-    GamePadPair,
+    CirclePair,
+    CrossPair,
     StartGame,
     PlayerCheckCommand,
     CharacterMove,

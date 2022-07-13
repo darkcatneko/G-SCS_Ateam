@@ -54,10 +54,6 @@ public class MainCharacter : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            CommandMoveCharacter(CommandType.Down);
-        }
         
     }
 
