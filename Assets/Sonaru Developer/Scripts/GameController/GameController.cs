@@ -42,6 +42,16 @@ public class GameController : MonoBehaviour
         ChangeState(StateEnum.StartGame);
     }
 
+    private void OnEnable()
+    {
+        Character.OnCharacterPointGet += SetPlayerPoint;
+    }
+
+    private void OnDisable()
+    {
+        Character.OnCharacterPointGet -= SetPlayerPoint;
+    }
+
     private void Update()
     {
         allStateDict[currentState]?.OnStateStay();
@@ -111,6 +121,10 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(delay);
         onFinish?.Invoke();
     }
-    
-    
+
+
+    private void SetPlayerPoint(PointData data)
+    {
+        Debug.Log(data.ElementType);
+    }
 }

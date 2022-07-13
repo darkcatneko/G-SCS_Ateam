@@ -33,6 +33,7 @@ public class PlayerDataSo : ScriptableObject
     }
     public void GetDislike()
     {
-        PlayerPoint -= 2;
+        PlayerMovePoint -= 2;
     }
+    
 }
