@@ -1262,8 +1262,8 @@ MonoBehaviour:
     oripos: {x: 0, y: 0, z: 0}
   LeaderMark: {fileID: 113593847}
   InformationBoard: {fileID: 172161652}
-  Ending: {fileID: 0}
-  ChosenOne: {fileID: 0}
+  Ending: {fileID: 1649960256}
+  ChosenOne: {fileID: 1682237571}
 --- !u!95 &322022345
 Animator:
   serializedVersion: 4
@@ -4167,6 +4167,7 @@ MonoBehaviour:
   MainUIAnimator: {fileID: 322022345}
   CurrentRound: 0
   RoundLastTime: 20
+  TargetPoint: 0
   currentState: 0
 --- !u!1001 &1086826422
 PrefabInstance:
