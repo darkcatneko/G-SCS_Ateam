@@ -135,7 +135,6 @@ public class MainCharacter : MonoBehaviour
         else
         {
             // Target block can move
-            // Up: x+ ; Right: z-;
             Debug.Log($"GO to : ({rowPos}, {colPos})" );
             moveTweener?.Kill();
             moveTweener = transform.DOMove(worldMap.GetWorldPosition(colPos, rowPos), MoveDuration);
