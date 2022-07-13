@@ -12,6 +12,8 @@ public class MainGameUIController : MonoBehaviour
     public PlayerUI[] Displays = new PlayerUI[4];
     public Image LeaderMark;
     public GameObject InformationBoard;
+    public Animator Ending;
+    public Image ChosenOne;
 
     private void Awake()
     {
@@ -40,6 +42,14 @@ public class MainGameUIController : MonoBehaviour
     public void SureFeedBack(int MYPlayer)
     {
         Displays[MYPlayer].PlayerUIObject.transform.DOPunchScale(Vector3.one*0.2f,0.35f,15).OnComplete(()=>{ Displays[MYPlayer].PlayerUIObject.transform.DOScale(Displays[MYPlayer].oripos, 0.2f);   });
+    }
+    public void ChosenOneIsYou(Player player)
+    {
+        ChosenOne.transform.position = ChosenOne.transform.position + new Vector3(470f, 0, 0) * (int)player;
+    }
+    public void CallEnding()
+    {
+        Ending.enabled = true;
     }
 }
 [System.Serializable]

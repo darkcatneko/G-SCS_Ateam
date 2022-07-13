@@ -126,5 +126,24 @@ public class GameController : MonoBehaviour
     private void SetPlayerPoint(PointData data)
     {
         Debug.Log(data.ElementType);
+        switch(data.ElementType)
+        {
+            case ElementType.Water:
+                players[1].playerData.GetFavorite();
+                players[0].playerData.GetDislike();
+                return;
+            case ElementType.Fire:
+                players[0].playerData.GetFavorite();
+                players[2].playerData.GetDislike();
+                return;
+            case ElementType.Wind:
+                players[2].playerData.GetFavorite();
+                players[3].playerData.GetDislike();
+                return;
+            case ElementType.Earth:
+                players[31].playerData.GetFavorite();
+                players[1].playerData.GetDislike();
+                return;
+        }
     }
 }
