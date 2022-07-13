@@ -9959,7 +9959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a19a47cd7e1204c9a07cf89be20de9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorldMap: {fileID: 11400000, guid: bf07880b296e35e43b8642566103cf8c, type: 2}
+  WorldMap: {fileID: 11400000, guid: 3ca26b921ee616a4db518d3fd0927795, type: 2}
   FireItem: {fileID: 2684546741189388513, guid: a10a3006cd1d1e84493bf25d0f7c480e,
     type: 3}
   WaterItem: {fileID: 6364584088239527927, guid: 1768d92dd21f4a649b7c8c633b466080,
