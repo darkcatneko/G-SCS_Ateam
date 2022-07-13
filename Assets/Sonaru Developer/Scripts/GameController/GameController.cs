@@ -96,7 +96,14 @@ public class GameController : MonoBehaviour
     {
         for (int i = 0; i < OurInput.Length; i++)
         {
-            OurInput[i] = Find_PC((int)NowLeadPlayer + i).My_Command;
+            if (Find_PC((int)NowLeadPlayer + i).playerData.PlayerMovePoint<=0)
+            {
+                OurInput[i] = CommandType.NOTHING;
+            }
+            else
+            {
+                OurInput[i] = Find_PC((int)NowLeadPlayer + i).My_Command;
+            }            
         }
         ChangeCommandPic("FirstCommand", 0);
         ChangeCommandPic("SecondCommand", 1);
