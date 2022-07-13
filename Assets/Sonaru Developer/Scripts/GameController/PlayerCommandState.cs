@@ -46,7 +46,7 @@ public class PlayerCommandState : IState
             Controller.ChangeState(StateEnum.CharacterMove);
         }
              
-        if (Controller.AllChecked())
+        else if (Controller.AllChecked())
         {
             Controller.ChangeState(StateEnum.CharacterMove);
         }
