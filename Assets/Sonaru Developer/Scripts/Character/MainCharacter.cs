@@ -56,7 +56,7 @@ public class MainCharacter : MonoBehaviour
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
-            CommandMoveCharacter(CommandType.Up);
+            CommandMoveCharacter(CommandType.Down);
         }
         
     }
@@ -119,8 +119,16 @@ public class MainCharacter : MonoBehaviour
         {
             // Target block is obstacle
             Debug.Log("Hit a obstacle: " + targetBlock);
+            moveTweener?.Kill();
+            var moveForward = transform.forward * 5;    //5單位
+            moveTweener = transform.DOMove(transform.position + moveForward, MoveDuration / 4).SetEase(Ease.OutSine);
+            moveTweener.onComplete += () =>
+            {
+                transform.DOMove(transform.position - moveForward, MoveDuration / 4).SetEase(Ease.InSine).onComplete += () => MoveOver = true;
+            };
+            moveTweener.Play();
             targetBlock = null;
-            MoveOver = true;
+            
             return;
         }
 
