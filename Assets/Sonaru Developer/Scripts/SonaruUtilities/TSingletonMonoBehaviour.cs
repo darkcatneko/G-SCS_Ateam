@@ -27,6 +27,7 @@ namespace SonaruUtilities
             if (instance == null)
             {
                 instance = this as T;
+                DontDestroyOnLoad(gameObject);
             }
             if (instance != this)
             {
