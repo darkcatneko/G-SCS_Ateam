@@ -44,6 +44,7 @@ public class GamePadRegistry : MonoBehaviour
                         LeftDpad = _gamepad.dpad;
                         TwoControllerRegistry.instance.P12.enabled = true;
                         Debug.Log( g.name + ": " + check.ToString());
+                        AudioController.Instance.SpawnSFX(SFXType.CirclePair);
                         return;
                     }
                 }
@@ -57,6 +58,7 @@ public class GamePadRegistry : MonoBehaviour
                         LeftDpad = _gamepad.dpad;
                         TwoControllerRegistry.instance.P34.enabled = true;
                         Debug.Log(g.name + ": " + check.ToString());
+                        AudioController.Instance.SpawnSFX(SFXType.CrossPair);
                         return;
                     }
                 }

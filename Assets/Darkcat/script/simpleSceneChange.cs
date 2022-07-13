@@ -9,4 +9,8 @@ public class simpleSceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("NewGridTest");
     }
+    public void DonDonSFX()
+    {
+        AudioController.Instance.SpawnSFX(SFXType.StartGame);
+    }
 }
