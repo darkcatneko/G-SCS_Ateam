@@ -27,6 +27,7 @@ public class PlayerCommandState : IState
 
         //Reset countdown timer 
         countdownTimer = Controller.RoundLastTime;
+        MainGameUIController.instance.SampleTime = countdownTimer;
 
         // change player command order
         Controller.NowLeadPlayer = Controller.LeaderChange(Controller.NowLeadPlayer);
@@ -38,6 +39,7 @@ public class PlayerCommandState : IState
     {
         // wait player command until time finished
         countdownTimer -= Time.deltaTime;
+        MainGameUIController.instance.SampleTime = countdownTimer;
         if (countdownTimer <= 0)
         {
             Debug.Log("小王八蛋給我按喔");
