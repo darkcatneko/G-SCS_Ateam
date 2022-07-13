@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player4
   m_EditorClassIdentifier: 
   ThisPlayer: 3
-  PlayerMovePoint: 7
+  PlayerMovePoint: 9
   PlayerPoint: 0
   Sure: 0
   My_Input: 4

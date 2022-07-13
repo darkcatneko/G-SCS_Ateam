@@ -139,7 +139,7 @@ public class GameController : MonoBehaviour
                 players[3].playerData.GetDislike();
                 return;
             case ElementType.Earth:
-                players[31].playerData.GetFavorite();
+                players[3].playerData.GetFavorite();
                 players[1].playerData.GetDislike();
                 return;
         }

@@ -4631,7 +4631,7 @@ MonoBehaviour:
   MainUIAnimator: {fileID: 322022345}
   CurrentRound: 0
   RoundLastTime: 20
-  TargetPoint: 0
+  TargetPoint: 15
   currentState: 0
 --- !u!1 &1115477905
 GameObject:
