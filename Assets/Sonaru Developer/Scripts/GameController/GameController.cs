@@ -16,10 +16,8 @@ public class GameController : MonoBehaviour
     [SerializeField] Sprite[] commandPic;               //圖庫
     public Animator MainUIAnimator;                     //UI動畫器
     public int CurrentRound;
-    //public bool CanInput = false;
-    //public bool IsLastRound => CurrentRound >= TotalRound;
     public float RoundLastTime = 20;
-    //public bool StartCountDown = false;
+    public int TargetPoint;
     
     [SerializeField] private StateEnum currentState;
     private Dictionary<StateEnum, IState> allStateDict;
