@@ -1149,6 +1149,9 @@ MonoBehaviour:
   InformationBoard: {fileID: 172161652}
   Ending: {fileID: 1649960256}
   ChosenOne: {fileID: 1682237571}
+  SampleTime: 0
+  TimerFill: {fileID: 990469314}
+  TimerTxt: {fileID: 1539613110}
 --- !u!95 &322022345
 Animator:
   serializedVersion: 4
@@ -11930,7 +11933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1682324366
 MonoBehaviour:
   m_ObjectHideFlags: 0
