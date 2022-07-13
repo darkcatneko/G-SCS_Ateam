@@ -39,22 +39,22 @@ public class MapPointController : MonoBehaviour
                     {
                         case ElementType.Fire:
                             var fire = Instantiate(FireItem, transform).GetComponent<PointData>();
-                            fire.Init(element, i, j, TrySpawnAnother);
+                            fire.Init(element, i, j);
                             allPoints[element].Add(fire);
                             break;
                         case ElementType.Water:
                             var water = Instantiate(WaterItem, transform).GetComponent<PointData>();
-                            water.Init(element, i, j, TrySpawnAnother);
+                            water.Init(element, i, j);
                             allPoints[element].Add(water);
                             break;
                         case ElementType.Wind:
                             var wind = Instantiate(WindItem, transform).GetComponent<PointData>();
-                            wind.Init(element, i, j, TrySpawnAnother);
+                            wind.Init(element, i, j);
                             allPoints[element].Add(wind);
                             break;
                         case ElementType.Earth:
                             var earth = Instantiate(EarthItem, transform).GetComponent<PointData>();
-                            earth.Init(element, i, j, TrySpawnAnother);
+                            earth.Init(element, i, j);
                             allPoints[element].Add(earth);
                             break;
                         default:
@@ -83,16 +83,16 @@ public class MapPointController : MonoBehaviour
     
     
     // Only run when total points amount is two. QQ 
-    private PointData CheckNeedSpawn(PointData nowRemoveData)
-    {
-       var index = allPoints[nowRemoveData.ElementType].IndexOf(nowRemoveData);
-       var targetData = allPoints[nowRemoveData.ElementType][1 - index];
-       return targetData.IsActive ? null : targetData;
-    }
+    // private PointData CheckNeedSpawn(PointData nowRemoveData)
+    // {
+    //    var index = allPoints[nowRemoveData.ElementType].IndexOf(nowRemoveData);
+    //    var targetData = allPoints[nowRemoveData.ElementType][1 - index];
+    //    return targetData.IsActive ? null : targetData;
+    // }
 
-    private void TrySpawnAnother(PointData nowRemoveData)
-    {
-        var target = CheckNeedSpawn(nowRemoveData);
-        if (target != null) target.Spawn(WorldMap.GetWorldPosition(target.ColIndex, target.RowIndex));
-    }
+    // private void TrySpawnAnother(PointData nowRemoveData)
+    // {
+    //     var target = CheckNeedSpawn(nowRemoveData);
+    //     if (target != null) target.Spawn(WorldMap.GetWorldPosition(target.ColIndex, target.RowIndex));
+    // }
 }
