@@ -21,7 +21,7 @@ public enum PlayerInput
 public class PlayerDataSo : ScriptableObject
 {
     public PlayerNum ThisPlayer;
-    public int PlayerMovePoint = 100;
+    public int PlayerMovePoint = 30;
     public int PlayerPoint=0;
     public bool Sure = false;
     public PlayerInput My_Input = PlayerInput.none;
@@ -35,5 +35,12 @@ public class PlayerDataSo : ScriptableObject
     {
         PlayerMovePoint -= 2;
     }
+    public void clear()
+    {
+        PlayerMovePoint = 30;
+        PlayerPoint = 0;
+        Sure = false;
+        My_Input = PlayerInput.none;
+}
     
 }

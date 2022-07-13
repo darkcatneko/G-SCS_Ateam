@@ -16,10 +16,8 @@ public class GameController : MonoBehaviour
     [SerializeField] Sprite[] commandPic;               //圖庫
     public Animator MainUIAnimator;                     //UI動畫器
     public int CurrentRound;
-    //public bool CanInput = false;
-    //public bool IsLastRound => CurrentRound >= TotalRound;
     public float RoundLastTime = 20;
-    //public bool StartCountDown = false;
+    public int TargetPoint;
     
     [SerializeField] private StateEnum currentState;
     private Dictionary<StateEnum, IState> allStateDict;
@@ -98,7 +96,14 @@ public class GameController : MonoBehaviour
     {
         for (int i = 0; i < OurInput.Length; i++)
         {
-            OurInput[i] = Find_PC((int)NowLeadPlayer + i).My_Command;
+            if (Find_PC((int)NowLeadPlayer + i).playerData.PlayerMovePoint<=0)
+            {
+                OurInput[i] = CommandType.NOTHING;
+            }
+            else
+            {
+                OurInput[i] = Find_PC((int)NowLeadPlayer + i).My_Command;
+            }            
         }
         ChangeCommandPic("FirstCommand", 0);
         ChangeCommandPic("SecondCommand", 1);
@@ -126,5 +131,24 @@ public class GameController : MonoBehaviour
     private void SetPlayerPoint(PointData data)
     {
         Debug.Log(data.ElementType);
+        switch(data.ElementType)
+        {
+            case ElementType.Water:
+                players[1].playerData.GetFavorite();
+                players[0].playerData.GetDislike();
+                return;
+            case ElementType.Fire:
+                players[0].playerData.GetFavorite();
+                players[2].playerData.GetDislike();
+                return;
+            case ElementType.Wind:
+                players[2].playerData.GetFavorite();
+                players[3].playerData.GetDislike();
+                return;
+            case ElementType.Earth:
+                players[3].playerData.GetFavorite();
+                players[1].playerData.GetDislike();
+                return;
+        }
     }
 }

@@ -5,14 +5,9 @@ using UnityEngine;
 public class MainGamePlayerData : MonoBehaviour
 {
     public PlayerDataSo[] Players = new PlayerDataSo[4];
-    void Start()
+    public static MainGamePlayerData instance;
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        instance = this;
     }
 }

@@ -40,10 +40,12 @@ public class CharacterMoveState : IState
         if (allMoveFinish)
         {
             // Check if all player not left any move point -> go to game over state
-                    
-            // Check if any player get enough points -> go to game over state
+            if(AllPlayerNoStepLeft()) Controller.ChangeState(StateEnum.GameOver);
             
-            // Random decide if go to special event
+            // Check if any player get enough points -> go to game over state
+            else if(AnyPlayerGetEnoughPoint()) Controller.ChangeState(StateEnum.GameOver);
+            
+            // Random decide if go to special event (If time enough)
             
             // else: round + 1 -> go to player command state
             Controller.ChangeState(StateEnum.PlayerCommand);
@@ -79,5 +81,16 @@ public class CharacterMoveState : IState
         {
             player.playerData.PlayerMovePoint--;
         }
+    }
+
+    private bool AllPlayerNoStepLeft()
+    {
+        return Controller.players.All(player => player.playerData.PlayerMovePoint <= 0);
+    }
+
+
+    private bool AnyPlayerGetEnoughPoint()
+    {
+        return Controller.players.Any(player => player.playerData.PlayerPoint >= Controller.TargetPoint);
     }
 }
