@@ -15,6 +15,10 @@ public class MainGameUIController : MonoBehaviour
     public Animator Ending;
     public Image ChosenOne;
 
+    public float SampleTime;
+    public Image TimerFill;
+    public TextMeshProUGUI TimerTxt;
+
     private void Awake()
     {
         instance = this;
@@ -33,6 +37,8 @@ public class MainGameUIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TimerFill.fillAmount = SampleTime/20f;
+        TimerTxt.text = Mathf.RoundToInt(SampleTime).ToString();
         foreach (var display in Displays)
         {
             display.PlayerPointDisplay.text = display.ThisPlayerData.PlayerPoint.ToString();
