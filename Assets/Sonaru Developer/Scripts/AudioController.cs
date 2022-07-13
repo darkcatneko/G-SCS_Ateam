@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AudioController : TSingletonMonoBehaviour<AudioController>
 {
-    public GameObject sfxItemSpawn;
+    //public GameObject sfxItemSpawn;
     public List<AudioData> AllSFX;
 
     private Dictionary<SFXType, AudioClip> SFXDict;
