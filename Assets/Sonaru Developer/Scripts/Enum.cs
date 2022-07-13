@@ -30,3 +30,14 @@ public enum ElementType
     Fire,Water,Wind,Earth
 }
 
+
+public enum SFXType
+{
+    GamePadPair,
+    StartGame,
+    PlayerCheckCommand,
+    CharacterMove,
+    CharacterHitObstacle,
+    GetItem,
+    Winner
+}

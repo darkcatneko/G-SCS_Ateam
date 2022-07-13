@@ -61,9 +61,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6914253062634547846, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
-  - {fileID: 2629460158707588835, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
-  - {fileID: 3555255045798058441, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
+  - {fileID: 2100000, guid: 697a414d39e406b439a44628a20bd0cb, type: 2}
+  - {fileID: 2100000, guid: 88bf916bc6c058c4cabb04a24546c252, type: 2}
+  - {fileID: 2100000, guid: 2377cdc18634be342866b88ecdcfbd06, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,9 +146,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6914253062634547846, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
-  - {fileID: 2629460158707588835, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
-  - {fileID: 3555255045798058441, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
+  - {fileID: 2100000, guid: 697a414d39e406b439a44628a20bd0cb, type: 2}
+  - {fileID: 2100000, guid: 88bf916bc6c058c4cabb04a24546c252, type: 2}
+  - {fileID: 2100000, guid: 2377cdc18634be342866b88ecdcfbd06, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -231,9 +231,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6914253062634547846, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
-  - {fileID: 2629460158707588835, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
-  - {fileID: 3555255045798058441, guid: 1472c11374ea5a74b92dffd823539956, type: 3}
+  - {fileID: 2100000, guid: 697a414d39e406b439a44628a20bd0cb, type: 2}
+  - {fileID: 2100000, guid: 88bf916bc6c058c4cabb04a24546c252, type: 2}
+  - {fileID: 2100000, guid: 2377cdc18634be342866b88ecdcfbd06, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -287,5 +287,5 @@ Transform:
   - {fileID: 3059942286975827259}
   - {fileID: 2570975260545659521}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
