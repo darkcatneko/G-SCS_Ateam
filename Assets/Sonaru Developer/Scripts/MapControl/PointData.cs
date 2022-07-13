@@ -47,12 +47,5 @@ public class PointData : MonoBehaviour
         gameObject.SetActive(IsActive);
     }
     
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("MainCharacter"))
-        {
-            Remove();
-        }
-    }
+    
 }

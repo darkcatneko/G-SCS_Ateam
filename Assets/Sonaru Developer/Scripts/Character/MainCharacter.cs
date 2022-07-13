@@ -22,6 +22,21 @@ public class MainCharacter : MonoBehaviour
     
     public bool MoveOver;
     
+    private PointData getPoint = null;
+
+    public PointData GetPoint
+    {
+        get => getPoint;
+        set
+        {
+            if(value != null) OnCharacterPointGet?.Invoke(value);
+            getPoint = value;  
+        } 
+    }
+
+    public event Action<PointData> OnCharacterPointGet;
+    
+    
     public void SetOriginPos(int col, int row)
     {
         colPos = col;
@@ -119,6 +134,18 @@ public class MainCharacter : MonoBehaviour
             //Debug.Log(worldMap.GetBlockData(colPos,rowPos));
             
             targetBlock = null;
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("PointItem"))
+        {
+            // same element get point -> add 2 points
+            // opposite element -> lose 2 steps
+            GetPoint = other.GetComponent<PointData>();
+            if (GetPoint != null) GetPoint.Remove();
         }
     }
 }

@@ -16,6 +16,7 @@ public class MapPointController : MonoBehaviour
 
     private Dictionary<ElementType, List<PointData>> allPoints;
     
+    
     private void Awake()
     {
         allPoints = new Dictionary<ElementType, List<PointData>>()

@@ -2,21 +2,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterMoveState : IState
 {
-    //private int targetCommand = 0;
     private bool allMoveFinish = false;
     //private bool commandPicAnim = false;
     public GameController Controller { get; set; }
     public void OnStateEnter(GameController controller)
     {
         Controller = controller;
-        //targetCommand = 0;
         allMoveFinish = false;
+        // Show information animation
         Controller.CallInformationAnimation();
-
+        // Calculate all player step
+        AllPlayerCountStep();
+        // Delay 3.5f Do MovePlayer
         Controller.StartCoroutine((Controller.DelayDo(3.5f, () =>
         {
             Controller.StartCoroutine(MoveAllPlayer(() => { allMoveFinish = true; }));
@@ -68,6 +70,14 @@ public class CharacterMoveState : IState
         while (!Controller.Character.MoveOver)
         {
             yield return null;
+        }
+    }
+
+    private void AllPlayerCountStep()
+    {
+        foreach (var player in Controller.players.Where(player => player.playerData.PlayerMovePoint > 0))
+        {
+            player.playerData.PlayerMovePoint--;
         }
     }
 }
