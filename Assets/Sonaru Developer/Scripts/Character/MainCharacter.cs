@@ -23,7 +23,8 @@ public class MainCharacter : MonoBehaviour
     public bool MoveOver;
     
     private PointData getPoint = null;
-
+    private Animator characterAnim;
+    
     public PointData GetPoint
     {
         get => getPoint;
@@ -45,6 +46,7 @@ public class MainCharacter : MonoBehaviour
     
     private void Awake()
     {
+        characterAnim = GetComponentInChildren<Animator>();
         //nowFaceDir = CommandType.Up;
         MoveOver = true;
         //Debug.Log(worldMap.GetBlockData(4,7));
@@ -129,7 +131,12 @@ public class MainCharacter : MonoBehaviour
             Debug.Log($"GO to : ({rowPos}, {colPos})" );
             moveTweener?.Kill();
             moveTweener = transform.DOMove(worldMap.GetWorldPosition(colPos, rowPos), MoveDuration);
-            moveTweener.onComplete += () => MoveOver = true;
+            moveTweener.onUpdate += () => characterAnim.SetBool("isMoving", true);
+            moveTweener.onComplete += () =>
+            {
+                characterAnim.SetBool("isMoving", false);
+                MoveOver = true;
+            };
             moveTweener.Play();
             //Debug.Log(worldMap.GetBlockData(colPos,rowPos));
             
