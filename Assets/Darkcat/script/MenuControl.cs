@@ -10,15 +10,15 @@ using UnityEngine.UI;
 public class MenuControl : MonoBehaviour
 {
 
-    public bool InstructionOpened = false;
-    public Image InstructionPIC;
-    [SerializeField] Vector2 StartPoint;
+    //public bool InstructionOpened = false;
+    //public Image InstructionPIC;
+    //[SerializeField] Vector2 StartPoint;
 
     public List<Gamepad> Controller = new List<Gamepad>();
     public bool[] IsPressing;
     private void Start()
     {
-        StartPoint = InstructionPIC.rectTransform.anchoredPosition;
+        //StartPoint = InstructionPIC.rectTransform.anchoredPosition;
         foreach (Gamepad g in Gamepad.all)
         {
             Controller.Add(g);            
@@ -38,27 +38,27 @@ public class MenuControl : MonoBehaviour
             }
             if (g.buttonEast.isPressed)
             {
-                SceneManager.LoadScene("GamePadRegister");
+                SceneManager.LoadScene("TwoControllerPlayerSign");
             }
             if (g.buttonSouth.isPressed)
             {
                 Application.Quit();
             }
-            if (g.buttonWest.isPressed)
-            {
-                if (IsPressing[i])return;
-                IsPressing[i] = true;
-                if (InstructionOpened == false)
-                {
-                    InstructionOpened = true;
-                    DOTween.To(()=> { return InstructionPIC.rectTransform.anchoredPosition; },x=> { InstructionPIC.rectTransform.anchoredPosition = x; },new Vector2(0,540),0.5f);
-                }
-                else
-                {
-                    InstructionOpened = false;
-                    DOTween.To(() => { return InstructionPIC.rectTransform.anchoredPosition; }, x => { InstructionPIC.rectTransform.anchoredPosition = x; }, StartPoint, 0.5f);
-                }
-            }
+            //if (g.buttonWest.isPressed)
+            //{
+            //    if (IsPressing[i])return;
+            //    IsPressing[i] = true;
+            //    if (InstructionOpened == false)
+            //    {
+            //        InstructionOpened = true;
+            //        DOTween.To(()=> { return InstructionPIC.rectTransform.anchoredPosition; },x=> { InstructionPIC.rectTransform.anchoredPosition = x; },new Vector2(0,540),0.5f);
+            //    }
+            //    else
+            //    {
+            //        InstructionOpened = false;
+            //        DOTween.To(() => { return InstructionPIC.rectTransform.anchoredPosition; }, x => { InstructionPIC.rectTransform.anchoredPosition = x; }, StartPoint, 0.5f);
+            //    }
+            //}
         }
     }
 }

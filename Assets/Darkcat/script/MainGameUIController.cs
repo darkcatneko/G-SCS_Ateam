@@ -44,6 +44,13 @@ public class MainGameUIController : MonoBehaviour
             display.PlayerPointDisplay.text = display.ThisPlayerData.PlayerPoint.ToString();
             display.PlayerStepLeft.text = display.ThisPlayerData.PlayerMovePoint.ToString();
         }
+        for (int i = 0; i < 4; i++)
+        {
+            if (MainData.players[i].playerData.PlayerMovePoint<=0)
+            {
+                Displays[i].PlayerUIObject.GetComponent<Image>().color = new Color(0.6f, 0.6f, 0.6f, 1f);
+            }            
+        }
     }
     public void SureFeedBack(int MYPlayer)
     {

@@ -1,5 +1,7 @@
 ﻿
-
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.SceneManagement;
 
 public class GameOverState : IState
 {
@@ -19,13 +21,22 @@ public class GameOverState : IState
 
     public void OnStateStay()
     {
+        
         if (enableGameRestartInput)
         {
             // detect input to restart game.
-            foreach (var player in Controller.players)
+            foreach (Gamepad g in Gamepad.all)
             {
-                player.playerData.clear();
-            }
+                if (g.buttonNorth.isPressed)
+                {
+                    foreach (var player in Controller.players)
+                    {
+                        player.playerData.clear();
+                    }
+                    SceneManager.LoadScene("Menu");
+                }
+                
+            }           
         }
     }
 
