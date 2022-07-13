@@ -35,5 +35,12 @@ public class PlayerDataSo : ScriptableObject
     {
         PlayerMovePoint -= 2;
     }
+    public void clear()
+    {
+        PlayerMovePoint = 100;
+        PlayerPoint = 0;
+        Sure = false;
+        My_Input = PlayerInput.none;
+}
     
 }
