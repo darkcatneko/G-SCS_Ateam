@@ -43,7 +43,7 @@ public class CharacterMoveState : IState
             if(AllPlayerNoStepLeft()) Controller.ChangeState(StateEnum.GameOver);
             
             // Check if any player get enough points -> go to game over state
-            if(AnyPlayerGetEnoughPoint()) Controller.ChangeState(StateEnum.GameOver);
+            else if(AnyPlayerGetEnoughPoint()) Controller.ChangeState(StateEnum.GameOver);
             
             // Random decide if go to special event (If time enough)
             
